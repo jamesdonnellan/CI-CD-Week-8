@@ -18,6 +18,12 @@ public class PersonService
     {
         return repo.save(p);
     }
+
+    public Person update (Person p)
+    {
+        return repo.save(p);
+    }
+
     public List<Person> findAll()
     {
         return repo.findAll();

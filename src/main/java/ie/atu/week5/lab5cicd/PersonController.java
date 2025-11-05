@@ -15,12 +15,24 @@ public class PersonController
         this.service = service;
     }
 
+    // CREATE
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Person create(@RequestBody Person person)
     {
         return service.create(person);
     }
+
+    // UPDATE
+    @PutMapping("/api/persons/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Person update(@PathVariable String id, @RequestBody Person updated)
+    {
+        return service.update(updated);
+    }
+
+
+
 
     @GetMapping
     public List<Person> all()
