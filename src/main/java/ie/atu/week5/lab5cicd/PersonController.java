@@ -31,13 +31,14 @@ public class PersonController
         return service.update(id, updated);
     }
 
+    /*
     // DELETE
     @DeleteMapping("/api/persons/{id}")
     public void delete(@PathVariable String id)
     {
         service.delete(id);
     }
-
+    */
     @GetMapping
     public List<Person> all()
     {
